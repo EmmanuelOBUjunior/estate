@@ -13,7 +13,7 @@ const Nav = () => {
         </h1>
 
         <form>
-            <input type="text" />
+            <input type="text" placeholder="Search"/>
         </form>
         </div>
     </nav>
