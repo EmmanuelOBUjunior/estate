@@ -15,12 +15,12 @@ const Nav = () => {
         </h1>
 
         <form className="bg-slate-200 flex items-center p-2 rounded">
-            <input type="text" placeholder="Search" className="bg-transparent focus:outline-none"/>
+            <input type="text" placeholder="Search" className="bg-transparent focus:outline-none w-24 sm:w-64"/>
             <FaSearch className='text-slate-500'/>
         </form>
 
-        <ul className='flex gap-2'>
-            <li>Home</li>
+        <ul className='flex gap-3'>
+            <li className='hidden sm:inline'>Home</li>
             <li>About</li>
             <li>Sign In</li>
         </ul>
