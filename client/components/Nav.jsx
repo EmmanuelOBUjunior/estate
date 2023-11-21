@@ -1,3 +1,5 @@
+import {FaSearch} from 'react-icons/fa'
+
 const Nav = () => {
 
   return (
