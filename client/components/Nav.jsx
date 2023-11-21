@@ -2,7 +2,16 @@ import React from 'react'
 
 const Nav = () => {
   return (
-    <div>Nav</div>
+    <nav className='bg-slate-300'>
+        <h1 className='flex'>
+            <span>
+                Cris
+            </span>
+            <span>
+                Estate
+            </span>
+        </h1>
+    </nav>
   )
 }
 
