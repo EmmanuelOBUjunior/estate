@@ -19,7 +19,7 @@ const Nav = () => {
             <FaSearch className='text-slate-500'/>
         </form>
 
-        <ul>
+        <ul className='flex gap-2'>
             <li>Home</li>
             <li>About</li>
             <li>Sign In</li>
