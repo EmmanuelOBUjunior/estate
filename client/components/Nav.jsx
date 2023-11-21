@@ -20,9 +20,9 @@ const Nav = () => {
         </form>
 
         <ul className='flex gap-3'>
-            <li className='hidden sm:inline'>Home</li>
-            <li>About</li>
-            <li>Sign In</li>
+            <li className='text-slate-600 hover:underline hidden sm:inline'>Home</li>
+            <li className='hidden sm:inline'>About</li>
+            <li className='hidden sm:inline'>Sign In</li>
         </ul>
         </div>
     </nav>
