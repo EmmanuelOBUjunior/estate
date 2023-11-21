@@ -14,8 +14,9 @@ const Nav = () => {
             </span>
         </h1>
 
-        <form className="bg-slate-200">
+        <form className="bg-slate-200 flex items-center p-2 rounded">
             <input type="text" placeholder="Search" className="bg-transparent focus:outline-none"/>
+            <FaSearch className='text-slate-500'/>
         </form>
         </div>
     </nav>
