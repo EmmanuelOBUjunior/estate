@@ -3,8 +3,8 @@ const Nav = () => {
   return (
     <nav className='bg-slate-300'>
         <div className="mx-auto items-center">
-        <h1 className='flex'>
-            <span className="text-slate-600 font-bold">
+        <h1 className='font-bold flex flex-wrap'>
+            <span className="text-slate-600 ">
                 Cris
             </span>
             <span className="text-slate-800 font-bold">
