@@ -18,6 +18,12 @@ const Nav = () => {
             <input type="text" placeholder="Search" className="bg-transparent focus:outline-none"/>
             <FaSearch className='text-slate-500'/>
         </form>
+
+        <ul>
+            <li>Home</li>
+            <li>About</li>
+            <li>Sign In</li>
+        </ul>
         </div>
     </nav>
   )
