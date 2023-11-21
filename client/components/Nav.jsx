@@ -21,8 +21,8 @@ const Nav = () => {
 
         <ul className='flex gap-3'>
             <li className='text-slate-600 hover:underline hidden sm:inline hover:cursor-pointer'>Home</li>
-            <li className='text-slate-600 hover:underline hidden sm:inline'>About</li>
-            <li className='text-slate-600 hover:underline hidden sm:inline'>Sign In</li>
+            <li className='text-slate-600 hover:underline hidden sm:inline hover:cursor-pointer'>About</li>
+            <li className='text-slate-600 hover:underline hidden sm:inline hover:cursor-pointer'>Sign In</li>
         </ul>
         </div>
     </nav>
