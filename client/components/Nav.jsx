@@ -1,6 +1,5 @@
-import React from 'react'
-
 const Nav = () => {
+    
   return (
     <nav className='bg-slate-300'>
         <h1 className='flex'>
