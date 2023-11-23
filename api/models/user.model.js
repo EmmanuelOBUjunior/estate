@@ -17,3 +17,5 @@ const userScehema = mongoose.Schema({
         required: true,
     }
 }, {timeStamps: true})
+
+export default User = mongoose.model("User", userScehema)
