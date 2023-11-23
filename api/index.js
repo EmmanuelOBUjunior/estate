@@ -13,6 +13,7 @@ mongoose.connect(process.env.MONGO_URI).then(()=>{
 });
 
 const app = express();
+app.use(express.json());
 
 app.listen(3001, ()=>{
     console.log('Server started successfully on port 3001');
