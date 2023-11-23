@@ -1,4 +1,5 @@
 import {FaSearch} from 'react-icons/fa'
+import Link from 'next/link'
 
 const Nav = () => {
 
@@ -20,9 +21,15 @@ const Nav = () => {
         </form>
 
         <ul className='flex gap-3'>
+            <Link href= "/">
             <li className='text-slate-600 hover:underline hidden sm:inline hover:cursor-pointer'>Home</li>
+            </Link>
+            <Link href="/about">
             <li className='text-slate-600 hover:underline hidden sm:inline hover:cursor-pointer'>About</li>
+            </Link>
+            <Link href="/signin">
             <li className='text-slate-600 hover:underline hidden sm:inline hover:cursor-pointer'>Sign In</li>
+            </Link>
         </ul>
         </div>
     </nav>
