@@ -1,3 +1,4 @@
+import { timeStamp } from 'console';
 import mongoose from 'mongoose';
 
 const userScehema = mongoose.Schema({
@@ -15,4 +16,4 @@ const userScehema = mongoose.Schema({
         type: String,
         required: true,
     }
-})
+}, {timeStamps: true})
