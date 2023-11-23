@@ -7,7 +7,7 @@ dotenv.config()
 mongoose.connect(process.env.MONGO_URI).then(()=>{
     console.log("Database connection established successfully");
 }).catch((err)=>{
-    console.log("Error connecting to Mongo",err);
+    console.log("Error connecting to Mongo ",err);
 });
 
 const app = express();
@@ -16,5 +16,9 @@ app.listen(3001, ()=>{
     console.log('Server started successfully on port 3001');
 })
 
+
+app.get("/test", (req, res) =>{
+    res.send("Hello world, api working")
+})
 
 
