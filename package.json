@@ -8,7 +8,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "type": "module",
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  },
   "scripts": {
     "dev": "nodemon api/index.js",
     "start": "node api.index.js"
