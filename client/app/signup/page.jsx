@@ -42,7 +42,7 @@ const SignUp = () => {
           <label htmlFor="password">Password</label>
           <input className='p-3 rounded focus:outline-none text-sm mb-3' type="password" id="password" placeholder='Enter password here' onChange = {handleChange}/>
 
-          <button className='bg-slate-800 text-white p-3 rounded-lg mt-2 uppercase'>Sign Up</button>
+          <button className='bg-slate-800 text-white p-3 rounded-lg mt-2 uppercase disabled:bg-slate-500 hover:bg-slate-700'>Sign Up</button>
         </form>
 
         <div className='mt-2 flex gap-2 justify-center'>
