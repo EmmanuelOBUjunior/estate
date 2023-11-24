@@ -12,15 +12,22 @@ mongoose.connect(process.env.MONGO_URI).then(()=>{
     console.log("Error connecting to Mongo ",err);
 });
 
+//Initialize express server
 const app = express();
+//Accept json response
 app.use(express.json());
 
 app.listen(3001, ()=>{
     console.log('Server started successfully on port 3001');
 })
 
-
+//User Route
 app.use("/api/user", userRouter)
+//Auth Route
 app.use("/api/auth", authRouter)
+
+
+//Middleware
+app.use()
 
 
