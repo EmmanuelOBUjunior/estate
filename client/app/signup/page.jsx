@@ -40,7 +40,7 @@ const SignUp = () => {
           <label htmlFor="email">Email</label>
           <input className='p-3 rounded focus:outline-none text-sm mb-3' type="email" id="email" placeholder='Enter email here' onChange = {handleChange}/>
           <label htmlFor="password">Password</label>
-          <input className='p-3 rounded focus:outline-none text-sm mb-3' type="password" id="username" placeholder='Enter password here' onChange = {handleChange}/>
+          <input className='p-3 rounded focus:outline-none text-sm mb-3' type="password" id="password" placeholder='Enter password here' onChange = {handleChange}/>
 
           <button className='bg-slate-800 text-white p-3 rounded-lg mt-2 uppercase'>Sign Up</button>
         </form>
