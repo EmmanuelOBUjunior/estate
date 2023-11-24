@@ -15,18 +15,19 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch("http://localhost:3001/api/auth/signup", {
+    const res = await fetch("/api/auth/signup", {
       method: "POST",
       headers:{
         "Content-Type": "application/json",
       },
       body: JSON.stringify(formData)
     })
+    console.log(typeof res)
     const data = await res.json()
 
     console.log(data)
   }
-  console.log(formData)
+  // console.log(formData)
   return (
     <section>
       <div className='h-screen justify-center flex items-center'>
