@@ -1,9 +1,14 @@
 'use client'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 const SignUp = () => {
   const [formData, setFormData] = useState({})
+  const [loading, setLoading] = useState(false)
+  const [error, setError] = useState(null)
+  const router = useRouter()
+
 
   const handleChange = (e) => {
     setFormData({
@@ -15,17 +20,34 @@ const SignUp = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const res = await fetch("/api/auth/signup", {
-      method: "POST",
-      headers:{
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(formData)
-    })
-    console.log(typeof res)
-    const data = await res.json()
+    try{
+      setLoading(true)
+      const res = await fetch("/api/auth/signup", {
+        method: "POST",
+        headers:{
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData)
+      })
+      // console.log(typeof res)
+      const data = await res.json()
 
-    // console.log(data)
+      if(data.success === false) {
+        setLoading(false)
+        setError(data.message)
+        return
+      }
+
+      setLoading(false)
+      setError(null)
+      router.push("/signin")
+
+      console.log(data)
+    }catch(err){
+      setLoading(false);
+      setError(err.message)
+    }
+
   }
   // console.log(formData)
   return (
@@ -42,14 +64,14 @@ const SignUp = () => {
           <label htmlFor="password">Password</label>
           <input className='p-3 rounded focus:outline-none text-sm mb-3' type="password" id="password" placeholder='Enter password here' onChange = {handleChange}/>
 
-          <button className='bg-slate-800 text-white p-3 rounded-lg mt-2 uppercase disabled:bg-slate-500 hover:bg-slate-700'>Sign Up</button>
+          <button className='bg-slate-800 text-white p-3 rounded-lg mt-2 uppercase disabled:bg-slate-500 hover:bg-slate-700'>{loading ? "Loading...": "Sign Up"}</button>
         </form>
 
         <div className='mt-2 flex gap-2 justify-center'>
           <p>Already have an account? </p>
           <Link href="/signin" className='text-blue-800 font-medium'>Sign In</Link>
         </div>
-
+        {error && <p className='text-sm text-red-500 mt-5'>{error}</p>}
         </div>
       </div>
     </section>
