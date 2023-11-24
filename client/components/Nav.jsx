@@ -28,7 +28,7 @@ const Nav = () => {
             <li className='text-slate-600 hover:underline hidden sm:inline hover:cursor-pointer'>About</li>
             </Link>
             <Link href="/signin">
-            <li className='text-slate-600 hover:underline hidden sm:inline hover:cursor-pointer'>Sign In</li>
+            <li className='text-slate-600 hover:underline hover:cursor-pointer'>Sign In</li>
             </Link>
         </ul>
         </div>
