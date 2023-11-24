@@ -10,7 +10,7 @@ const SignUp = () => {
       ...formData,
       [e.target.id]: e.target.value
     })
-    console.log(formData)
+    // console.log(formData)
   }
 
   const handleSubmit = async (e) => {
@@ -25,7 +25,7 @@ const SignUp = () => {
     console.log(typeof res)
     const data = await res.json()
 
-    console.log(data)
+    // console.log(data)
   }
   // console.log(formData)
   return (
