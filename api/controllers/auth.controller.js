@@ -1,5 +1,6 @@
 import User from '../models/user.model.js'
 import bcryptjs from "bcryptjs"
+import { errorHandler } from '../utils/error.js';
 
 export const signup = async (req, res, next)=>{
     const {username, email, password} = req.body;
@@ -14,7 +15,13 @@ export const signup = async (req, res, next)=>{
 }
 
 export const signin = async (res, req, next) =>{
+    try{
+
+    }catch(err){
+        next(err)
+    }
     const {email, password} = req.body;
     const validUser = await User.findOne({email})
-    if(!validUser) return next()
+    if(!validUser) return next(errorHandler(400, "Invalid Credentials"))
+
 }
