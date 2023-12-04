@@ -20,6 +20,7 @@ export const signin = async (res, req, next) =>{
         const validUser = await User.findOne({email})
         if(!validUser) return next(errorHandler(400, "Invalid Credentials"))
         const validPassword = await bcryptjs.compareSync(password, validUser.password)
+        if(!validPassword) return next(errorHandler(400, "Invalid Credentials"));
     }catch(err){
         next(err)
     }
