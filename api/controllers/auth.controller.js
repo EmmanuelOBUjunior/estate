@@ -12,3 +12,9 @@ export const signup = async (req, res, next)=>{
         next(err)
     }
 }
+
+export const signin = async (res, req, next) =>{
+    const {email, password} = req.body;
+    const validUser = await User.findOne({email})
+    if(!validUser) return next()
+}
