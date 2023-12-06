@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google'
 import '@/styles/globals.css'
 import Nav from '@/components/Nav'
 import { Provider } from 'react-redux'
-import { Store } from '@reduxjs/toolkit'
+import { store } from './'
 
 
 const inter = Inter({ subsets: ['latin'] })
