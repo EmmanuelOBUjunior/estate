@@ -57,14 +57,12 @@ const SignIn = () => {
         <h1 className='font-bold text-4xl'>Sign In</h1>
         <p>Welcome back, get access to your account</p>
         <form onSubmit = {handleSubmit} className='mt-4 flex flex-col'>
-          <label htmlFor="username">Username</label>
-          <input className='p-3 rounded focus:outline-none text-sm mb-3' type="text" id="username" placeholder='Enter username here' onChange = {handleChange}/>
           <label htmlFor="email">Email</label>
           <input className='p-3 rounded focus:outline-none text-sm mb-3' type="email" id="email" placeholder='Enter email here' onChange = {handleChange}/>
           <label htmlFor="password">Password</label>
           <input className='p-3 rounded focus:outline-none text-sm mb-3' type="password" id="password" placeholder='Enter password here' onChange = {handleChange}/>
 
-          <button className='bg-slate-800 text-white p-3 rounded-lg mt-2 uppercase disabled:bg-slate-500 hover:bg-slate-700'>{loading ? "Loading...": "Sign Up"}</button>
+          <button className='bg-slate-800 text-white p-3 rounded-lg mt-2 uppercase disabled:bg-slate-500 hover:bg-slate-700'>{loading ? "Loading...": "Sign In"}</button>
         </form>
 
         <div className='mt-2 flex gap-2 justify-center'>
