@@ -40,7 +40,7 @@ const SignIn = () => {
 
       setLoading(false)
       setError(null)
-      router.push("/signin")
+      router.push("/")
 
       console.log(data)
     }catch(err){
