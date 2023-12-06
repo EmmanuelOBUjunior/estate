@@ -55,7 +55,7 @@ const SignIn = () => {
       <div className='h-screen justify-center flex items-center'>
         <div className='border border-gray-400 p-6 max-w-md w-full rounded'>
         <h1 className='font-bold text-4xl'>Sign In</h1>
-        <p>Create an account with us</p>
+        <p>Welcome back, get access to your account</p>
         <form onSubmit = {handleSubmit} className='mt-4 flex flex-col'>
           <label htmlFor="username">Username</label>
           <input className='p-3 rounded focus:outline-none text-sm mb-3' type="text" id="username" placeholder='Enter username here' onChange = {handleChange}/>
