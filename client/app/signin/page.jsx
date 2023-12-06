@@ -66,8 +66,8 @@ const SignIn = () => {
         </form>
 
         <div className='mt-2 flex gap-2 justify-center'>
-          <p>Already have an account? </p>
-          <Link href="/signup" className='text-blue-800 font-medium'>Sign In</Link>
+          <p>Do not have an account? </p>
+          <Link href="/signup" className='text-blue-800 font-medium'>Sign Up</Link>
         </div>
         {error && <p className='text-sm text-red-500 mt-5'>{error}</p>}
         </div>
