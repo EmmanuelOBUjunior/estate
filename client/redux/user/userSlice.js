@@ -11,7 +11,17 @@ const userSlice = createSlice({
     initialState,
     reducers: {
         signinStart: (state) =>{
-            state.loading: false
+            state.loading = true
+        },
+        signinSuccess: (state,action) =>{
+            state.currentUser = action.payload;
+            state.loading = false,
+            state.error = null
+        },
+        signinFailure: (state,action) =>{
+            state.error = action.payload;
+            state.loading = false
         }
     }
+
 })
