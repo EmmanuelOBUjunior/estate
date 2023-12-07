@@ -8,4 +8,10 @@ const initialState ={
 
 const userSlice = createSlice({
     name: "user",
+    initialState,
+    reducers: {
+        signinStart: (state) =>{
+            state.loading: false
+        }
+    }
 })
