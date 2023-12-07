@@ -7,5 +7,5 @@ const initialState ={
 }
 
 const userSlice = createSlice({
-    
+    name: "user",
 })
