@@ -5,3 +5,7 @@ const initialState ={
     loading: false,
     error: null
 }
+
+const userSlice = createSlice({
+    
+})
