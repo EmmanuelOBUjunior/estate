@@ -1,7 +1,7 @@
 'use client'
 import { combineReducers, configureStore } from '@reduxjs/toolkit'
 import userReducer from "./features/user/userSlice.js"
-import { persistReducer } from 'redux-persist'
+import { persistReducer, persistStore } from 'redux-persist'
 import storage from "redux-persist/lib/storage"
 
 
@@ -23,3 +23,5 @@ export const makeStore = () => {
     })
   })
 }
+
+export const persistor = persistStore(store)
