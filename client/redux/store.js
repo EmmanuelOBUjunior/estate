@@ -6,6 +6,12 @@ import {persistReducer} from 'redux-persist'
 
 const rootReducer = combineReducers({user: userReducer})
 
+const persitConfiq = {
+  key: "root",
+  storage,
+  version: 1
+}
+
 const persistedReducer = persistReducer(persitConfiq, rootReducer)
 
 export const makeStore = () => {
