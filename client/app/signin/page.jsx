@@ -44,8 +44,7 @@ const SignIn = () => {
 
       console.log(data)
     }catch(err){
-      setLoading(false);
-      setError(err.message)
+      useDispatch(signinFailure(err.message))
     }
 
   }
