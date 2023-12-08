@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google'
 import '@/styles/globals.css'
 import Nav from '@/components/Nav'
 import StoreProvider from '@/redux/StoreProvider'
-// import { makeStore, persistor } from '@/redux/store.js'
+import { makeStore, persistor } from '@/redux/store.js'
 // import { PersistGate } from 'redux-persist/integration/react'
 
 
