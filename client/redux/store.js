@@ -15,11 +15,13 @@ const persistConfiq = {
 
 const persistedReducer = persistReducer(persistConfiq, rootReducer)
 
-export const makeStore = configureStore({
+export const makeStore = () =>{
+  return configureStore({
     reducer: persistedReducer,
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck: false
     })
   })
+}
 
-export const persistor = persistStore(makeStore)
+// export const persistor = persistStore(makeStore)
