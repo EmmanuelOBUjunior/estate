@@ -42,7 +42,7 @@ const SignIn = () => {
       dispatch(signinSuccess())
       router.push("/")
 
-      console.log(data)
+      // console.log(data)
     }catch(err){
       dispatch(signinFailure(err.message))
     }
