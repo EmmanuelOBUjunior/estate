@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={inter.className}>
         <Nav/>
-        <StoreProvider store = {makeStore}>
+        <StoreProvider store = {makeStore()}>
         <PersistGate loading={null} persistor={persistor}>
         {children}
         </PersistGate>
