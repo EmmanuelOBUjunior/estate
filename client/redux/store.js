@@ -17,7 +17,7 @@ const persistedReducer = persistReducer(persitConfiq, rootReducer)
 
 export const makeStore = () => {
   return configureStore({
-    reducer: {user: userReducer},
+    reducer: persistedReducer,
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck: false
     })
