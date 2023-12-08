@@ -9,6 +9,7 @@ const SignIn = () => {
   const [formData, setFormData] = useState({})
   const {loading, error} = useSelector((state) => state.user)
   const router = useRouter()
+  const dispatch = useDispatch()
 
 
   const handleChange = (e) => {
@@ -22,7 +23,7 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-      useDispatch(signinStart)
+      dispatch(signinStart)
       const res = await fetch("/api/auth/signin", {
         method: "POST",
         headers:{
@@ -38,12 +39,12 @@ const SignIn = () => {
         return
       }
 
-      useDispatch(signinSuccess)
+      dispatch(signinSuccess)
       router.push("/")
 
       console.log(data)
     }catch(err){
-      useDispatch(signinFailure(err.message))
+      dispatch(signinFailure(err.message))
     }
 
   }
