@@ -35,12 +35,11 @@ const SignIn = () => {
       const data = await res.json()
 
       if(data.success === false) {
-        useDispatch(signinFailure)
+        useDispatch(signinFailure(data.message))
         return
       }
 
-      setLoading(false)
-      setError(null)
+      useDispatch(signinSuccess)
       router.push("/")
 
       console.log(data)
