@@ -35,8 +35,7 @@ const SignIn = () => {
       const data = await res.json()
 
       if(data.success === false) {
-        setLoading(false)
-        setError(data.message)
+        useDispatch(signinFailure)
         return
       }
 
