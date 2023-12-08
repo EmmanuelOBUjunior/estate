@@ -24,4 +24,4 @@ export const makeStore = () =>{
   })
 }
 
-export const persistor = persistStore(makeStore())
+export const persistor = persistStore(makeStore)
