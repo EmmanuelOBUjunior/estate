@@ -7,13 +7,13 @@ import storage from "redux-persist/lib/storage"
 
 const rootReducer = combineReducers({user: userReducer})
 
-const persitConfiq = {
+const persistConfiq = {
   key: "root",
   storage,
   version: 1
 }
 
-const persistedReducer = persistReducer(persitConfiq, rootReducer)
+const persistedReducer = persistReducer(persistConfiq, rootReducer)
 
 export const makeStore = () => {
   return configureStore({
@@ -24,4 +24,4 @@ export const makeStore = () => {
   })
 }
 
-export const persistor = persistStore(store)
+export const persistor = persistStore(makeStore)
