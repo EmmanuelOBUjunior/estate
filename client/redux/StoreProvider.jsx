@@ -2,7 +2,7 @@
 import { useRef } from 'react'
 import { Provider } from 'react-redux'
 import { makeStore } from '../lib/store'
-import userReducer from "./features/user/userSlice.js"
+import userReducer from "./user/userSlice.js"
 
 export default function StoreProvider({ user, children }) {
   const storeRef = useRef(null)
