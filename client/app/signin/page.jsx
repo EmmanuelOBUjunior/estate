@@ -3,12 +3,11 @@ import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 import {signinStart, signinSuccess, signinFailure} from "../../redux/user/userSlice.js"
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 
 const SignIn = () => {
   const [formData, setFormData] = useState({})
-  const [loading, setLoading] = useState(false)
-  const [error, setError] = useState(null)
+  const {loading, error} = useSelector(state => user.state)
   const router = useRouter()
 
 
