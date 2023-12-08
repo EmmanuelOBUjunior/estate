@@ -5,7 +5,7 @@ import { makeStore } from '../lib/store'
 import userReducer from "./user/userSlice.js"
 
 export default function StoreProvider({ user, children }) {
-  const storeRef = useRef()
+  const storeRef = useRef(null)
   if (!storeRef.current) {
     // Create the store instance the first time this renders
     storeRef.current = makeStore()
