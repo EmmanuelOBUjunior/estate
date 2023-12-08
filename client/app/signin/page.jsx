@@ -23,7 +23,7 @@ const SignIn = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try{
-      dispatch(signinStart)
+      dispatch(signinStart())
       const res = await fetch("/api/auth/signin", {
         method: "POST",
         headers:{
@@ -35,11 +35,11 @@ const SignIn = () => {
       const data = await res.json()
 
       if(data.success === false) {
-        useDispatch(signinFailure(data.message))
+        dispatch(signinFailure(data.message))
         return
       }
 
-      dispatch(signinSuccess)
+      dispatch(signinSuccess())
       router.push("/")
 
       console.log(data)
