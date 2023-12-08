@@ -7,20 +7,21 @@ import storage from "redux-persist/lib/storage"
 
 const rootReducer = combineReducers({user: userReducer})
 
-const persistConfiq = {
+const persistConfig = {
   key: "root",
   storage,
   version: 1
 }
 
-const persistedReducer = persistReducer(persistConfiq, rootReducer)
+const persistedReducer = persistReducer(persistConfig, rootReducer)
 
-export const makeStore = configureStore({
+export const makeStore = () =>{
+  return configureStore({
     reducer: persistedReducer,
     middleware: (getDefaultMiddleware) => getDefaultMiddleware({
         serializableCheck: false
     })
   })
-
+}
 
 export const persistor = persistStore(makeStore)
