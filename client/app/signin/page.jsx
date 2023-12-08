@@ -7,7 +7,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 const SignIn = () => {
   const [formData, setFormData] = useState({})
-  const {loading, error} = useSelector(state => user.state)
+  const {loading, error} = useSelector((state) => state.user)
   const router = useRouter()
 
 
