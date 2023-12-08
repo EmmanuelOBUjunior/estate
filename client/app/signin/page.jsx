@@ -2,7 +2,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
-import {signinStart, signinSuccess, signinFailure} from "../../redux/user/userSlice.js"
+import {signinStart, signinSuccess, signinFailure} from "../../redux/features/user/userSlice.js"
 import { useDispatch, useSelector } from 'react-redux'
 
 const SignIn = () => {
