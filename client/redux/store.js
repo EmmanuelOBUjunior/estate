@@ -19,7 +19,7 @@ const createNoopStorage = () => {
 };
 
 const storage =
-  typeof window === "undefined" ? createNoopStorage() : createWebStorage();
+  typeof window === "undefined" ? createNoopStorage("local") : createWebStorage();
 
 
 const rootReducer = combineReducers({user: userReducer})
