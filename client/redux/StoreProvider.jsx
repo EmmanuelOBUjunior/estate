@@ -2,13 +2,16 @@
 import { Provider } from 'react-redux'
 import { makeStore } from '../redux/store.js'
 import { persistStore } from 'redux-persist'
+import { PersistGate } from 'redux-persist/integration/react'
 
 
 export default function StoreProvider({children}) {
   let persistor = persistStore(makeStore);
   return (
   <Provider store={makeStore}>
+    <PersistGate persistor={makeStore}>
     {children}
+    </PersistGate>
     </Provider>
   
   )
