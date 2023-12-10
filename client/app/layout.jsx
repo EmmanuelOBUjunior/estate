@@ -2,7 +2,7 @@ import { Inter } from 'next/font/google'
 import '@/styles/globals.css'
 import Nav from '@/components/Nav'
 import StoreProvider from '@/redux/StoreProvider'
-// import { PersistGate } from 'redux-persist/integration/react'
+import { PersistGate } from 'redux-persist/integration/react'
 import { makeStore} from '@/redux/store.js'
 import { persistStore } from 'redux-persist'
 
@@ -15,15 +15,15 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  let persistor = new persistStore(makeStore) 
+  let persistor = persistStore(makeStore) 
   return (
     <html lang="en">
       <body className={inter.className}>
         <Nav/>
         <StoreProvider store = {makeStore}>
-        {/* <PersistGate persistor={persistor}> */}
+        <PersistGate persistor={persistor}>
         {children}
-        {/* </PersistGate> */}
+        </PersistGate>
         </StoreProvider>
         </body>
     </html>
