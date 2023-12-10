@@ -1,6 +1,8 @@
 'use client'
 import { Provider } from 'react-redux'
 import { makeStore } from '../redux/store.js'
+import { persistStore } from 'redux-persist'
+
 
 export default function StoreProvider({children}) {
   return (
