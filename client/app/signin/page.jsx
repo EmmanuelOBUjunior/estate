@@ -39,7 +39,7 @@ const SignIn = () => {
         return
       }
 
-      dispatch(signinSuccess())
+      dispatch(signinSuccess(data))
       router.push("/")
 
       // console.log(data)
