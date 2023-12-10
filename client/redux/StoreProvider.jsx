@@ -9,7 +9,7 @@ export default function StoreProvider({children}) {
   let persistor = persistStore(makeStore);
   return (
   <Provider store={makeStore}>
-    <PersistGate persistor={makeStore}>
+    <PersistGate persistor={persistor}>
     {children}
     </PersistGate>
     </Provider>
