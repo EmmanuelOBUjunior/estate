@@ -21,5 +21,3 @@ export const makeStore = configureStore({
         serializableCheck: false
     })
   })
-
-export const persistor = persistStore(makeStore)
