@@ -22,7 +22,7 @@ const Profile = () => {
 
           <button className='bg-slate-800 text-white p-3 rounded-lg mt-2 mb-2 uppercase disabled:bg-slate-500 hover:bg-slate-700'>Update</button>
         </form>
-        <div className=''>
+        <div className='flex justify-between'>
           <span className='text-red-800 font-semibold'>
             Delete Account
           </span>
