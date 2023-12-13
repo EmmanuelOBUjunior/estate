@@ -30,10 +30,9 @@ const Nav = () => {
             <li className='text-slate-600 hover:underline hidden sm:inline hover:cursor-pointer'>About</li>
             </Link>
             <Link href="/signin">
-            {/* {
-            currentUser ? <img src= {currentUser.avatar} alt = "Profile"/> : ""
-            } */}
-            <li className='text-slate-600 hover:underline hover:cursor-pointer'>Sign In</li>
+            {
+            currentUser ? (<img src= {currentUser.avatar} alt = "Profile" className = "h-8 rounded-full w-8 object-cover"/> ): <li className='text-slate-600 hover:underline hover:cursor-pointer'>Sign In</li>
+            }
             </Link>
         </ul>
         </div>
