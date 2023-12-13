@@ -74,7 +74,7 @@ const SignUp = () => {
           <Link href="/signin" className='text-blue-800 font-medium'>Sign In</Link>
         </div>
         {error && <p className='text-sm text-red-500 mt-5'>{error}</p>}
-        </div>
+        </div> 
       </div>
     </section>
   )
