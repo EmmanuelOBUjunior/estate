@@ -5,7 +5,7 @@ const Profile = () => {
     <section>
       <div className='h-screen justify-center flex items-center'>
         <div className='border border-gray-400 p-6 max-w-md w-full rounded'>
-        <h1 className='font-bold text-4xl'>Sign In</h1>
+        <h1 className='font-bold text-4xl'>Profile</h1>
         <p>Welcome back, get access to your account</p>
         <form className='mt-4 flex flex-col'>
           <label htmlFor="email">Email</label>
