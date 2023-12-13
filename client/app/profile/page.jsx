@@ -1,6 +1,8 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
 
 const Profile = () => {
+  
   return (
     <section>
       <div className='h-screen justify-center flex items-center'>
