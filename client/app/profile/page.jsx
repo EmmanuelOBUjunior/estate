@@ -1,8 +1,9 @@
+'use client'
 import React from 'react'
 import { useSelector } from 'react-redux'
 
 const Profile = () => {
-  
+  const {currentUser} = useSelector((state) =>state.user)
   return (
     <section>
       <div className='h-screen justify-center flex items-center'>
