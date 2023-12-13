@@ -31,7 +31,7 @@ const Nav = () => {
             <li className='text-slate-600 hover:underline hidden sm:inline hover:cursor-pointer'>About</li>
             </Link>
             <PrivateRoute>
-            <Link href="/signin">
+            <Link href="/profile">
             {
             currentUser ? (<img src= {currentUser.avatar} alt = "Profile" className = "h-8 rounded-full w-8 object-cover"/> ): <li className='text-slate-600 hover:underline hover:cursor-pointer'>Sign In</li>
             }
