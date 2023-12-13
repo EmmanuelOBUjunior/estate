@@ -9,11 +9,14 @@ const Profile = () => {
       <div className='h-screen justify-center flex items-center'>
         <div className='border border-gray-400 p-6 max-w-md w-full rounded'>
         <h1 className='font-bold text-4xl'>Profile</h1>
-        <img src={currentUser.avator} alt="Profile Picture" className='rounded full w-50 h-50 object-cover'/>
+        <img src={currentUser.avatar} alt="Profile Picture" className='rounded-full w-50 h-50'/>
         <form className='mt-4 flex flex-col'>
-          <input className='p-3 rounded focus:outline-none text-sm mb-3' type="email" id="email" placeholder='Enter email here'/>
+          <label htmlFor="email">Email</label>
+          <input className='p-3 rounded focus:outline-none text-sm mb-3' type="email" id="email" placeholder='Email'/>
+          <label htmlFor="email">Username</label>
+          <input className='p-3 rounded focus:outline-none text-sm mb-3' type="email" id="email" placeholder='Username'/>
           <label htmlFor="password">Password</label>
-          <input className='p-3 rounded focus:outline-none text-sm mb-3' type="password" id="password" placeholder='Enter password here' />
+          <input className='p-3 rounded focus:outline-none text-sm mb-3' type="password" id="password" placeholder='Change Password' />
 
           <button className='bg-slate-800 text-white p-3 rounded-lg mt-2 mb-2 uppercase disabled:bg-slate-500 hover:bg-slate-700'>Update</button>
         </form>
