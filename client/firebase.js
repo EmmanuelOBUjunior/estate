@@ -5,7 +5,7 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: import.meta.env.FOR,
+  apiKey: process.env.GOOGLE_AUTH_KEY,
   authDomain: "crisestate-ce4d3.firebaseapp.com",
   projectId: "crisestate-ce4d3",
   storageBucket: "crisestate-ce4d3.appspot.com",
