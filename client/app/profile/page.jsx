@@ -13,7 +13,7 @@ const Profile = () => {
         <div className='items-center flex flex-col gap-2'>
         <h1 className='font-bold text-4xl'>Profile</h1>
         <input type="file" ref={fileRef} accept='image/*' hidden/>
-        <img onclick={()=> fileRef.current.click()} src={currentUser.avatar} alt="Profile Picture" className='rounded-full w-50 h-50'/>
+        <img onClick={()=> fileRef.current.click()} src={currentUser.avatar} alt="Profile Picture" className='rounded-full w-50 h-50'/>
         </div>
         <form className='mt-8 flex flex-col'>
           <label htmlFor="email">Email</label>
