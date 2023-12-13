@@ -12,7 +12,7 @@ const Profile = () => {
         <h1 className='font-bold text-4xl'>Profile</h1>
         <img src={currentUser.avatar} alt="Profile Picture" className='rounded-full w-50 h-50'/>
         </div>
-        <form className='mt-4 flex flex-col'>
+        <form className='mt-8 flex flex-col'>
           <label htmlFor="email">Email</label>
           <input className='p-3 rounded focus:outline-none text-sm mb-3' type="email" id="email" placeholder='Email'/>
           <label htmlFor="email">Username</label>
