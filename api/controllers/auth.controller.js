@@ -39,7 +39,8 @@ export const google = async (req,res,next) => {
             const {password:pass, ...rest} = user._doc
             res.cookie("access_token", token, {httpOnly:true}).status(200).json(rest)
         }else{
-
+            const generatedPassword = Math.random().toString(36).slice(-8) + Math.random().toString(36).slice(-8)
+            const newUser = await new User({email:req.body.email, password:generatedPassword, avatar:req.body.photo})
         }
     } catch (error) {
         next(error)
