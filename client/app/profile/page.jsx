@@ -9,7 +9,7 @@ const Profile = () => {
       <div className='h-screen justify-center flex items-center'>
         <div className='border border-gray-400 p-6 max-w-md w-full rounded'>
         <h1 className='font-bold text-4xl'>Profile</h1>
-        <img src="" alt="" />
+        <img src={currentUser.avator} alt="Profile Picture" />
         <form className='mt-4 flex flex-col'>
           <label htmlFor="email">Email</label>
           <input className='p-3 rounded focus:outline-none text-sm mb-3' type="email" id="email" placeholder='Enter email here'/>
