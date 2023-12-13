@@ -1,8 +1,10 @@
+'use client'
 import {FaSearch} from 'react-icons/fa'
 import Link from 'next/link'
+import { useSelector } from 'react-redux'
 
 const Nav = () => {
-
+    //const currentUser = useSelector((state) =>state.user)
   return (
     <nav className='bg-slate-300 shadow-md'>
         <div className="flex mx-auto justify-between max-w-6xl items-center p-3">
@@ -28,6 +30,9 @@ const Nav = () => {
             <li className='text-slate-600 hover:underline hidden sm:inline hover:cursor-pointer'>About</li>
             </Link>
             <Link href="/signin">
+            {/* {
+            currentUser ? <img src= {currentUser.avatar} alt = "Profile"/> : ""
+            } */}
             <li className='text-slate-600 hover:underline hover:cursor-pointer'>Sign In</li>
             </Link>
         </ul>
