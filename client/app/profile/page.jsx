@@ -13,7 +13,7 @@ const Profile = () => {
         <div className='items-center flex flex-col gap-2'>
         <h1 className='font-bold text-4xl'>Profile</h1>
         <input type="file" ref={fileRef} accept='image/*' hidden/>
-        <img onClick={()=> fileRef.current.click()} src={currentUser.avatar} alt="Profile Picture" className='rounded-full w-50 h-50'/>
+        <img onClick={()=> fileRef.current.click()} src={currentUser.avatar} alt="Profile Picture" className='rounded-full w-50 h-50 cursor-pointer'/>
         </div>
         <form className='mt-8 flex flex-col'>
           <label htmlFor="email">Email</label>
@@ -26,10 +26,10 @@ const Profile = () => {
           <button className='bg-slate-800 text-white p-3 rounded-lg mt-2 mb-2 uppercase disabled:bg-slate-500 hover:bg-slate-700'>Update</button>
         </form>
         <div className='flex justify-between'>
-          <span className='text-red-800 font-semibold'>
+          <span className='cursor-pointer text-red-800 font-semibold'>
             Delete Account
           </span>
-          <span className='text-red-800 font-semibold'>
+          <span className='cursor-pointer text-red-800 font-semibold'>
             Sign Out
           </span>
         </div>
