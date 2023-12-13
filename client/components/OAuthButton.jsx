@@ -1,4 +1,4 @@
-import { app } from '@/firebase';
+import { app } from '@/firebase.js';
 import {GoogleAuthProvider, getAuth, signInWithPopup} from 'firebase/auth';
 
 function OAuthButton() {
