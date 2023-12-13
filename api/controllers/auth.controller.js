@@ -41,6 +41,7 @@ export const google = async (req,res,next) => {
         }else{
             const generatedPassword = Math.random().toString(36).slice(-8) + Math.random().toString(36).slice(-8)
             const newUser = await new User({email:req.body.email, password:generatedPassword, avatar:req.body.photo})
+            await newUser.save()
         }
     } catch (error) {
         next(error)
