@@ -1,4 +1,5 @@
 'use client'
+import OAuthButton from '@/components/OAuthButton'
 import Link from 'next/link'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
@@ -65,6 +66,7 @@ const SignUp = () => {
           <input className='p-3 rounded focus:outline-none text-sm mb-3' type="password" id="password" placeholder='Enter password here' onChange = {handleChange}/>
 
           <button className='bg-slate-800 text-white p-3 rounded-lg mt-2 uppercase disabled:bg-slate-500 hover:bg-slate-700'>{loading ? "Loading...": "Sign Up"}</button>
+          <OAuthButton/>
         </form>
 
         <div className='mt-2 flex gap-2 justify-center'>
