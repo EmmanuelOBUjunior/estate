@@ -7,7 +7,7 @@ const PrivateRoute = ({children}) => {
     const router = useRouter()
     const {currentUser} = useSelector((state) => state.user)
 
-    useEffectect(() => {
+    useEffect(() => {
         if(currentUser){
             return 
         }else{
