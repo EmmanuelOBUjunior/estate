@@ -9,7 +9,7 @@ const Profile = () => {
         <p>Welcome back, get access to your account</p>
         <form className='mt-4 flex flex-col'>
           <label htmlFor="email">Email</label>
-          <input className='p-3 rounded focus:outline-none text-sm mb-3' type="email" id="email" placeholder='Enter email here' onChange = {handleChange}/>
+          <input className='p-3 rounded focus:outline-none text-sm mb-3' type="email" id="email" placeholder='Enter email here'/>
           <label htmlFor="password">Password</label>
           <input className='p-3 rounded focus:outline-none text-sm mb-3' type="password" id="password" placeholder='Enter password here' onChange = {handleChange}/>
 
