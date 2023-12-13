@@ -1,9 +1,14 @@
-import React from 'react'
+import { app } from '@/firebase';
+import {GoogleAuthProvider, getAuth, signInWithPopup} from 'firebase/auth';
 
 function OAuthButton() {
 
     const handleGoogleAuth = async () => {
         try {
+            const provider  = new GoogleAuthProvider();
+            const auth  = getAuth(app);
+
+            const result =  await signInWithPopup(provider, auth);
             
         } catch (error) {
             console.log("Failed to sign in with Google: " , error)
