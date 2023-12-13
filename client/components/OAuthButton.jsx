@@ -9,6 +9,8 @@ function OAuthButton() {
             const auth  = getAuth(app);
 
             const result =  await signInWithPopup(provider, auth);
+
+            console.log(result);
             
         } catch (error) {
             console.log("Failed to sign in with Google: " , error)
