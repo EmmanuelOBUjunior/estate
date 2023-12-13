@@ -12,6 +12,7 @@ const Profile = () => {
         <div className='border border-gray-400 p-6 max-w-md w-full rounded'>
         <div className='items-center flex flex-col gap-2'>
         <h1 className='font-bold text-4xl'>Profile</h1>
+        <input type="file" accept='image/*' hidden/>
         <img src={currentUser.avatar} alt="Profile Picture" className='rounded-full w-50 h-50'/>
         </div>
         <form className='mt-8 flex flex-col'>
