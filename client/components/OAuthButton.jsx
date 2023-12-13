@@ -15,13 +15,16 @@ function OAuthButton() {
 
             console.log(result);
 
-            const data = await fetch("api/auth/", {
+            const res = await fetch("api/auth/google", {
                 method: 'POST',
                 headers:{
                     "Content-Type": "application/json",
                 },
                 body: JSON.stringify(result.user.displayName, result.user.email, result.user.photoURL),
             })
+
+            const data = await res.json()
+
             dispatch(signinSuccess(data))
 
             
