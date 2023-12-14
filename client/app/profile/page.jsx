@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useRef } from 'react'
-import {getStorage, ref, uploadBytesResumable} from "firebase/storage"
+import {getDownloadURL, getStorage, ref, uploadBytesResumable} from "firebase/storage"
 import { app } from '@/firebase'
 
 const Profile = () => {
@@ -28,10 +28,12 @@ const Profile = () => {
       (snapshot) => {
         const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
         setFilePerc(progress)
-      })
+      });
+
       (error) =>{
         setFileUploadError(true)
-      }
+      };
+      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) =>
   }
 
   return (
