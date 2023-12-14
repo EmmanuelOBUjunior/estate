@@ -2,6 +2,8 @@
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useRef } from 'react'
+import {getStorage} from "firebase/storage"
+import { app } from '@/firebase'
 
 const Profile = () => {
   const fileRef = useRef(null)
@@ -15,7 +17,7 @@ const Profile = () => {
   }, [file])
 
   const handleUploadFile = (file) => {
-
+    const storage = getStorage(app)
   }
 
   return (
