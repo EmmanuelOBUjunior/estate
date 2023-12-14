@@ -22,12 +22,12 @@ const Profile = () => {
     const storageRef = ref(storage, fileName)
     const uploadTask  = uploadBytesResumable(storageRef, file)
 
-    uploadTask.on("state_changed", () => {
+    uploadTask.on("state_changed",
       (snapshot) => {
         const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
         console.log("Upload is " + progress + "% done" )
       }   
-     })
+     )
   }
 
   return (
