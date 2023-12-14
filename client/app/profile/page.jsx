@@ -23,7 +23,11 @@ const Profile = () => {
     const uploadTask  = uploadBytesResumable(storageRef, file)
 
     uploadTask.on("state_changed", () => {
-      (snapshot)    })
+      (snapshot) => {
+        const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+        console.log("Upload is " + progress.floor() + "% done" )
+      }   
+     })
   }
 
   return (
@@ -32,7 +36,7 @@ const Profile = () => {
         <div className='border border-gray-400 p-6 max-w-md w-full rounded'>
         <div className='items-center flex flex-col gap-2'>
         <h1 className='font-bold text-4xl'>Profile</h1>
-        <input onChange={(e)=>setFiles(e.target.files)} type="file" ref={fileRef} accept='image/*' hidden/>
+        <input onChange={(e)=>setFile(e.target.files)} type="file" ref={fileRef} accept='image/*' hidden/>
         <img onClick={()=> fileRef.current.click()} src={currentUser.avatar} alt="Profile Picture" className='rounded-full w-50 h-50 cursor-pointer'/>
         </div>
         <form className='mt-8 flex flex-col'>
