@@ -18,6 +18,8 @@ const Profile = () => {
 
   const handleUploadFile = (file) => {
     const storage = getStorage(app)
+    const fileName = new Date().getTime() + file.name
+    const
   }
 
   return (
