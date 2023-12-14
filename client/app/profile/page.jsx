@@ -21,6 +21,9 @@ const Profile = () => {
     const fileName = new Date().getTime() + file.name
     const storageRef = ref(storage, fileName)
     const uploadTask  = uploadBytesResumable(storageRef, file)
+
+    uploadTask.on("state_changed", () => {
+      (snapshot)    })
   }
 
   return (
