@@ -10,6 +10,7 @@ const Profile = () => {
   const {currentUser} = useSelector((state) =>state.user)
   const [file, setFile] = useState(undefined)
   const [filePerc, setFilePerc] = useState(0)
+  const [fileUploadError, setFileUploadError] = useState(false)
 
   useEffect(() =>{
     if(file){
