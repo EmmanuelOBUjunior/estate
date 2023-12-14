@@ -14,6 +14,10 @@ const Profile = () => {
     }
   }, [file])
 
+  const handleUploadFile = () => {
+    
+  }
+
   return (
     <section>
       <div className='h-screen justify-center flex items-center'>
