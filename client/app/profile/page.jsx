@@ -42,8 +42,8 @@ const Profile = () => {
         <form className='mt-8 flex flex-col'>
           <label htmlFor="email">Email</label>
           <input className='p-3 rounded focus:outline-none text-sm mb-3' type="email" id="email" placeholder='Email'/>
-          <label htmlFor="email">Username</label>
-          <input className='p-3 rounded focus:outline-none text-sm mb-3' type="email" id="email" placeholder='Username'/>
+          <label htmlFor="username">Username</label>
+          <input className='p-3 rounded focus:outline-none text-sm mb-3' type="email" id="username" placeholder='Username'/>
           <label htmlFor="password">Password</label>
           <input className='p-3 rounded focus:outline-none text-sm mb-3' type="password" id="password" placeholder='Change Password' />
 
