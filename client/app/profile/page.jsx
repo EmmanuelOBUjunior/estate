@@ -25,7 +25,7 @@ const Profile = () => {
     uploadTask.on("state_changed", () => {
       (snapshot) => {
         const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-        console.log("Upload is " + progress.floor() + "% done" )
+        console.log("Upload is " + progress + "% done" )
       }   
      })
   }
