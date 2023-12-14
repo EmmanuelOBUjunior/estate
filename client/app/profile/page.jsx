@@ -14,7 +14,7 @@ const Profile = () => {
     }
   }, [file])
 
-  const handleUploadFile = () => {
+  const handleUploadFile = (file) => {
 
   }
 
