@@ -9,11 +9,11 @@ const Profile = () => {
   const fileRef = useRef(null)
   const {currentUser} = useSelector((state) =>state.user)
   const [file, setFile] = useState(undefined)
-  console.log(file.name)
 
   useEffect(() =>{
     if(file){
       // handleUploadFile(file)
+      console.log(file.name)
     }
   }, [file])
 
@@ -37,7 +37,7 @@ const Profile = () => {
         <div className='border border-gray-400 p-6 max-w-md w-full rounded'>
         <div className='items-center flex flex-col gap-2'>
         <h1 className='font-bold text-4xl'>Profile</h1>
-        <input onChange={(e)=>setFile(e.target.files)} type="file" ref={fileRef} accept='image/*' hidden/>
+        <input onChange={(e)=>setFile(e.target.files[0])} type="file" ref={fileRef} accept='image/*' hidden/>
         <img onClick={()=> fileRef.current.click()} src={currentUser.avatar} alt="Profile Picture" className='rounded-full w-50 h-50 cursor-pointer'/>
         </div>
         <form className='mt-8 flex flex-col'>
