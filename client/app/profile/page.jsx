@@ -6,7 +6,7 @@ import { useRef } from 'react'
 const Profile = () => {
   const fileRef = useRef(null)
   const {currentUser} = useSelector((state) =>state.user)
-  const [file, setFiles] = useState(undefined)
+  const [file, setFile] = useState(undefined)
 
   return (
     <section>
