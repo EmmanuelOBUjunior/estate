@@ -2,7 +2,7 @@
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useRef } from 'react'
-import {getStorage, ref} from "firebase/storage"
+import {getStorage, ref, uploadBytesResumable} from "firebase/storage"
 import { app } from '@/firebase'
 
 const Profile = () => {
@@ -20,7 +20,7 @@ const Profile = () => {
     const storage = getStorage(app)
     const fileName = new Date().getTime() + file.name
     const storageRef = ref(storage, fileName)
-    
+    const uploadTask  = uploadBytesResumable(storageRef, file)
   }
 
   return (
