@@ -33,7 +33,9 @@ const Profile = () => {
       (error) =>{
         setFileUploadError(true)
       };
-      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) =>
+      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) =>{
+
+      })
   }
 
   return (
