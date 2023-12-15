@@ -11,6 +11,7 @@ const Profile = () => {
   const [file, setFile] = useState(undefined)
   const [filePerc, setFilePerc] = useState(0)
   const [fileUploadError, setFileUploadError] = useState(false)
+  const [formData, setFormData] = useState({})
 
   useEffect(() =>{
     if(file){
