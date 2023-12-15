@@ -4,7 +4,7 @@ import { useSelector } from 'react-redux'
 import { useRef } from 'react'
 import {getDownloadURL, getStorage, ref, uploadBytesResumable} from "firebase/storage"
 import { app } from '@/firebase'
-import { redirect } from 'next/dist/server/api-utils'
+
 
 const Profile = () => {
   const fileRef = useRef(null)
@@ -50,7 +50,7 @@ const Profile = () => {
         <img onClick={()=> fileRef.current.click()} src={currentUser.avatar} alt="Profile Picture" className='rounded-full w-30 h-30 cursor-pointer'/>
         <p className="text-center">
          {
-          fileUploadError ? (<span className='text-red'>Image Upload Error</span>) : filePerc
+          fileUploadError ? (<span className='text-red'>Image Upload Error</span>) : filePerc > 0 && filePerc < 100 ? (Sp)
          }
         </p>
         </div>
