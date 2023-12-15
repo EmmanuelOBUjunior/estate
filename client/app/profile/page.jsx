@@ -4,6 +4,7 @@ import { useSelector } from 'react-redux'
 import { useRef } from 'react'
 import {getDownloadURL, getStorage, ref, uploadBytesResumable} from "firebase/storage"
 import { app } from '@/firebase'
+import { redirect } from 'next/dist/server/api-utils'
 
 const Profile = () => {
   const fileRef = useRef(null)
@@ -29,14 +30,14 @@ const Profile = () => {
       (snapshot) => {
         const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
         setFilePerc(progress)
-      });
-
+      },
       (error) =>{
         setFileUploadError(true)
-      };
+      },
       getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) =>{
         setFormData({...formData, avatar: downloadURL})
       })
+      )
   }
 
   return (
@@ -46,7 +47,12 @@ const Profile = () => {
         <div className='items-center flex flex-col gap-2'>
         <h1 className='font-bold text-4xl'>Profile</h1>
         <input onChange={(e)=>setFile(e.target.files[0])} type="file" ref={fileRef} accept='image/*' hidden/>
-        <img onClick={()=> fileRef.current.click()} src={currentUser.avatar} alt="Profile Picture" className='rounded-full w-50 h-50 cursor-pointer'/>
+        <img onClick={()=> fileRef.current.click()} src={currentUser.avatar} alt="Profile Picture" className='rounded-full w-30 h-30 cursor-pointer'/>
+        <p className="text-center">
+         {
+          fileUploadError ? (<span className='text-red'>Image Upload Error</span>) : filePerc
+         }
+        </p>
         </div>
         <form className='mt-8 flex flex-col'>
           <label htmlFor="email">Email</label>
