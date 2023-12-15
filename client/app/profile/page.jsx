@@ -14,6 +14,8 @@ const Profile = () => {
   const [fileUploadError, setFileUploadError] = useState(false)
   const [formData, setFormData] = useState({})
 
+  console.log(formData)
+
   useEffect(() =>{
     if(file){
       handleUploadFile(file)
@@ -36,6 +38,7 @@ const Profile = () => {
       },
       getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) =>{
         setFormData({...formData, avatar: downloadURL})
+        console.log(formData)
       })
       )
   }
