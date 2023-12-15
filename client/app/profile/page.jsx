@@ -50,7 +50,7 @@ const Profile = () => {
         <img onClick={()=> fileRef.current.click()} src={currentUser.avatar} alt="Profile Picture" className='rounded-full w-30 h-30 cursor-pointer'/>
         <p className="text-center">
          {
-          fileUploadError ? (<span className='text-red'>Image Upload Error</span>) : filePerc > 0 && filePerc < 100 ? (<span className='text-slate-700'> Uploading {filePerc}%</span>) : filePerc === 100 
+          fileUploadError ? (<span className='text-red'>Image Upload Error</span>) : filePerc > 0 && filePerc < 100 ? (<span className='text-slate-700'> Uploading {filePerc}%</span>) : filePerc === 100 ? (<span className='text-green-700'>Image Upload Complete</span>) : ''
          }
         </p>
         </div>
