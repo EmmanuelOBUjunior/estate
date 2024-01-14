@@ -51,8 +51,8 @@ const Profile = () => {
         <div className='items-center flex flex-col gap-2'>
         <h1 className='font-bold text-4xl'>Profile</h1>
         <input onChange={(e)=>setFile(e.target.files[0])} type="file" ref={fileRef} accept='image/*' hidden/>
-        <img onClick={()=> fileRef.current.click()} src={formData.avatar || currentUser.avatar} alt="Profile Picture" className='rounded-full object-cover w-15 h-15 cursor-pointer'/>
-        <p className="text-center">
+        <img onClick={()=> fileRef.current.click()} src={formData.avatar || currentUser.avatar} alt="Profile Picture" className='rounded-full object-cover  h-24 w-24 cursor-pointer'/>
+        <p className="text-sm self-center">
          {
           fileUploadError ? (<span className='text-red'>Image Upload Error</span>) : filePerc > 0 && filePerc < 100 ? (<span className='text-slate-700'> Uploading {filePerc}%</span>) : filePerc === 100 ? (<span className='text-green-700'>Image Upload Complete</span>) : ''
          }
