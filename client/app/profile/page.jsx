@@ -14,7 +14,7 @@ const Profile = () => {
   const [fileUploadError, setFileUploadError] = useState(false)
   const [formData, setFormData] = useState({})
 
-  console.log(formData)
+  // console.log(formData)
 
   useEffect(() =>{
     if(file){
@@ -32,14 +32,14 @@ const Profile = () => {
       (snapshot) => {
         const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
         setFilePerc(Math.floor(progress))
-      }),
+      });
       (error) =>{
         setFileUploadError(true)
-      },
+      };
       ()=>{
-      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) =>
+      getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) =>{
         setFormData({...formData, avatar: downloadURL})
-        // console.log(formData) 
+        console.log(formData) }
       )
     }
   }
