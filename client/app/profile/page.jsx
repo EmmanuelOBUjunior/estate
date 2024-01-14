@@ -14,7 +14,7 @@ const Profile = () => {
   const [fileUploadError, setFileUploadError] = useState(false)
   const [formData, setFormData] = useState({})
 
-  // console.log(formData)
+  console.log(formData)
 
   useEffect(() =>{
     if(file){
@@ -32,26 +32,26 @@ const Profile = () => {
       (snapshot) => {
         const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100
         setFilePerc(Math.floor(progress))
-      });
+      },
       (error) =>{
         setFileUploadError(true)
-      };
+      },
       ()=>{
       getDownloadURL(uploadTask.snapshot.ref).then((downloadURL) =>{
-        setFormData({...formData, avatar: downloadURL})
-        console.log(formData) }
+        setFormData({...formData, avatar: downloadURL})}
       )
     }
+    )
   }
 
   return (
     <section>
       <div className='h-screen justify-center flex items-center'>
         <div className='border border-gray-400 p-6 max-w-md w-full rounded'>
-        <div className='items-center flex flex-col gap-2'>
+        < className='items-center flex flex-col gap-2'>
         <h1 className='font-bold text-4xl'>Profile</h1>
         <input onChange={(e)=>setFile(e.target.files[0])} type="file" ref={fileRef} accept='image/*' hidden/>
-        <img onClick={()=> fileRef.current.click()} src={formData.avatar || currentUser.avatar} alt="Profile Picture" className='rounded-full w-15 h-15 cursor-pointer'/>
+        <img onClick={()=> fileRef.current.click()} src={formData.avatar || currentUser.avatar} alt="Profile" className='rounded-full object-cover w-15 h-15 cursor-pointer'/>
         <p className="text-center">
          {
           fileUploadError ? (<span className='text-red'>Image Upload Error</span>) : filePerc > 0 && filePerc < 100 ? (<span className='text-slate-700'> Uploading {filePerc}%</span>) : filePerc === 100 ? (<span className='text-green-700'>Image Upload Complete</span>) : ''
